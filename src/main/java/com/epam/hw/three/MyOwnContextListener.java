@@ -23,6 +23,6 @@ public class MyOwnContextListener {
         System.out.println(event);
 
         final User user = context.getBean(User.class);
-        user.setName(user.getName() + " refreshed");
+        user.setName(user.getName() + " refreshed inside context listener");
     }
 }

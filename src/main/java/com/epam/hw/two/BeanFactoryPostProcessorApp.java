@@ -5,12 +5,10 @@ import com.epam.hw.one.beans.Pet;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class PostProcessorApp {
+public class BeanFactoryPostProcessorApp {
     public static void main(String[] args) {
         ApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext(
-                        ApplicationConfig.class,
-                        MyOwnBeanFactoryPostProcessor.class);
+                new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
         final Pet pet = applicationContext.getBean(Pet.class);
         System.out.println(pet.getNickname());
