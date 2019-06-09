@@ -5,7 +5,7 @@ import com.epam.hw.one.beans.Pet;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Ps {
+public class PostProcessorApp {
     public static void main(String[] args) {
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(
