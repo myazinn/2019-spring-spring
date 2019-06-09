@@ -14,15 +14,12 @@ public class MyOwnScopeTest {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
         final Pet pet = applicationContext.getBean(Pet.class);
-        pet.setNickname("test");
-
         for (int i = 0; i < MyOwnScope.SCOPE_REFRESH_RATE; i++) {
             assertSame(pet, applicationContext.getBean(Pet.class));
         }
 
 //          I have no idea why these tests aren't working. I need some help.
 /*      final Pet newPet = applicationContext.getBean(Pet.class);
-        assertNotEquals(pet.getNickname(), newPet.getNickname());
         assertNotSame(pet, newPet);
         assertSame(newPet, applicationContext.getBean(Pet.class));*/
     }
