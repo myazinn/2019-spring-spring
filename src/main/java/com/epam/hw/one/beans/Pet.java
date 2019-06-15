@@ -4,15 +4,9 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 public class Pet {
-    private static Pet ourInstance = new Pet();
-
-    public static Pet getInstance() {
-        return ourInstance;
-    }
-
     private String nickname;
 
-    private Pet() {
+    public Pet() {
         nickname = "Dogg";
     }
 

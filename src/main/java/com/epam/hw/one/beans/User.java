@@ -4,15 +4,9 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 public class User {
-    private static User ourInstance = new User();
-
-    public static User getInstance() {
-        return ourInstance;
-    }
-
     private String name;
 
-    private User() {
+    public User() {
         name = "Snoop";
     }
 

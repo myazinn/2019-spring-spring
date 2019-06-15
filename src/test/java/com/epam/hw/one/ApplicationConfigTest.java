@@ -1,16 +1,16 @@
 package com.epam.hw.one;
 
 import com.epam.hw.one.beans.Pet;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ApplicationConfigTest {
+class ApplicationConfigTest {
 
     @Test
-    public void petConfigTest() {
+    void petConfigTest() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         final Pet pet = applicationContext.getBean(Pet.class);
         assertEquals("Dogg", pet.getNickname());
